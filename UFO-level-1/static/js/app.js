@@ -45,6 +45,9 @@ function runEnter() {
   console.log(filteredData); 
 
   //overwrite table with filtered data
+  var tbody = d3.select("tbody");
+  tbody.html("")
+
   data.forEach((filteredData) => {
     var row = tbody.append("tr");
     Object.entries(filteredData).forEach(([key, value]) => {
