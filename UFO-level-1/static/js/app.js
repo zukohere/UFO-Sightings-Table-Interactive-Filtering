@@ -6,7 +6,7 @@ var tableData = data;
 //ref for table body using html tag tbody
 var tbody = d3.select("tbody");
 
-data.forEach((UFOsighting) => {
+tableData.forEach((UFOsighting) => {
     var row = tbody.append("tr");
     Object.entries(UFOsighting).forEach(([key, value]) => {
       var cell = row.append("td");
@@ -46,12 +46,13 @@ function runEnter() {
 
   //overwrite table with filtered data
   var tbody = d3.select("tbody");
-  tbody.html("")
+  tbody.html("") // clears the table
 
-  data.forEach((filteredData) => {
+  filteredData.forEach((UFOsighting_bydate) => {
     var row = tbody.append("tr");
-    Object.entries(filteredData).forEach(([key, value]) => {
+    Object.entries(UFOsighting_bydate).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.text(value);
     });
-  })};
+  })
+};
