@@ -37,10 +37,14 @@ function runEnter() {
   var inputValue = inputElement.property("value");
 
   console.log(inputValue);
-// filter the data to the user selection
-  var filteredData = tableData.filter(sighting => 
+// filter the data to the user selection, if blank, show the full table. 
+if (inputValue){  
+var filteredData = tableData.filter(sighting => 
     sighting.datetime === inputValue);
-
+}
+else {
+  var filteredData = tableData;
+};
 //print the filtered data to the console
   console.log(filteredData); 
 
