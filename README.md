@@ -1,7 +1,7 @@
 # javascript-challenge
-Repo for HW 14
+https://zukohere.github.io/UFO-Sightings-Table-Interactive-Filtering/
 
-This activity imports an array of objects representing data from sightings of UFOs. 
+This projects imports an array of objects representing data from sightings of UFOs. 
 
 An typical sighting includes the following data:
    * datetime: "1/1/2010",
